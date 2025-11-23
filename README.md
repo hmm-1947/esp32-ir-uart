@@ -34,3 +34,6 @@ Resistors
 4.7k–10k (pull-up on collector)
 
 100Ω (IR LED current limit)
+
+**Circuit Image**
+![circuit-image](circuit.jpg)
