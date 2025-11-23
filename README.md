@@ -6,19 +6,31 @@ This project demonstrates how to send and receive UART data over infrared light,
 **Features**
 
 Send and receive text data over IR
+
 Uses 300 baud UART pulses
+
 Works with basic components (BC547 + photodiode + IR LED)
+
 Demonstrates IR modulation and optical UART
+
 Clean decoding using ESP32 HardwareSerial
+
 Fully open-source and easy to build
 
 **Hardware Used**
 
 ESP32 Dev Board
+
 IR LED (transmitter)
+
 Photodiode (receiver)
+
 BC547 NPN transistor
+
 Resistors
+
 100k (photodiode → base)
+
 4.7k–10k (pull-up on collector)
+
 100Ω (IR LED current limit)
