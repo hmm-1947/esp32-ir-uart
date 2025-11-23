@@ -1,3 +1,5 @@
+**Circuit Image**
+![circuit-image](circuit.jpg)
 **ESP32 IR UART Communication**
 
 A simple infrared communication system using an ESP32, a BC547 transistor amplifier, an IR LED transmitter, and a photodiode receiver.
@@ -34,6 +36,3 @@ Resistors
 4.7k–10k (pull-up on collector)
 
 100Ω (IR LED current limit)
-
-**Circuit Image**
-![circuit-image](circuit.jpg)
