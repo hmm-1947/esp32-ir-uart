@@ -1,4 +1,4 @@
-**Optical IR UART Communication – ESP32 Energy Meter Probe**
+# Optical IR UART Communication – ESP32 Energy Meter Probe
 
 A compact, open-source infrared communication system using ESP32.
 Designed to read optical ports on electronic energy meters (IEC 62056-21 style) and also useful for general IR-UART experiments.
@@ -9,7 +9,7 @@ v2 – LM393 + Transistor Amplified (Recommended)
 
 v1 – Minimal Components (Legacy)
 
-**🔥 v2 – LM393 Amplified Probe (Recommended)**
+# 🔥 v2 – LM393 Amplified Probe (Recommended)
 
 The new version offers:
 
@@ -32,7 +32,7 @@ The new version offers:
 
 ![v2 circuit](v2circuit.png)
 
-**📘 v1 – Minimal Photodiode Probe (Legacy)**
+# 📘 v1 – Minimal Photodiode Probe (Legacy)
 
 This is the original simple design using only:
 
@@ -49,7 +49,7 @@ This is the original simple design using only:
 ![v1 circuit](v1img.jpg)
 ![v1 schematic](v1circuit.png)
 
-**🧰 Hardware Requirements**
+# 🧰 Hardware Requirements
 
 - ESP32 Dev Board
 
@@ -63,7 +63,7 @@ This is the original simple design using only:
 
 - BC548 / 2N2222 (IR LED driver transistor)
 
-**Resistors:**
+# Resistors:
 
 - 56k–100k (photodiode → BC547 base)
 
