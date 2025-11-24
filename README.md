@@ -1,40 +1,78 @@
-**Circuit Image**
-![circuit-image](circuit.jpg)
-![circuit-image](real.png)
+**Optical IR UART Communication – ESP32 Energy Meter Probe**
 
-**ESP32 IR UART Communication**
+A compact, open-source infrared communication system using ESP32.
+Designed to read optical ports on electronic energy meters (IEC 62056-21 style) and also useful for general IR-UART experiments.
 
-A simple infrared communication system using an ESP32, a BC547 transistor amplifier, an IR LED transmitter, and a photodiode receiver.
-This project demonstrates how to send and receive UART data over infrared light, enabling optical serial communication similar to energy meter optical probes (IEC 62056-21 style).
+Supports two hardware versions:
 
-**Features**
+v2 – LM393 + Transistor Amplified (Recommended)
 
-Send and receive text data over IR
+v1 – Minimal Components (Legacy)
 
-Uses 300 baud UART pulses
+**🔥 v2 – LM393 Amplified Probe (Recommended)**
 
-Works with basic components (BC547 + photodiode + IR LED)
+The new version offers:
 
-Demonstrates IR modulation and optical UART
+- Up to 2400 baud stable IR UART
 
-Clean decoding using ESP32 HardwareSerial
+- Clean digital output using LM393 comparator
 
-Fully open-source and easy to build
+- Dual-transistor design
+(BC547 amplifier for photodiode + BC548 driver for IR LED)
 
-**Hardware Used**
+- Strong IR transmission
 
-ESP32 Dev Board
+- Noise-resistant reception suitable for real energy meters
 
-IR LED (transmitter)
+- Compatible with L&T / Secure / Genus / Landis+Gyr optical ports
 
-Photodiode (receiver)
+- Works reliably even in daylight
 
-BC547 NPN transistor
+- Plug-and-play with ESP32 HardwareSerial
 
-Resistors
+![v2 circuit](v2circuit.png)
 
-100k (photodiode → base)
+**📘 v1 – Minimal Photodiode Probe (Legacy)**
 
-4.7k–10k (pull-up on collector)
+This is the original simple design using only:
 
-100Ω (IR LED current limit)
+- 1× Photodiode
+
+- 1× IR LED
+
+- 1× BC547 transistor
+
+- A few resistors
+
+- Works at 300 baud and designed for people who have very limited components.
+
+![v1 circuit](v1img.jpg)
+![v1 schematic](v1circuit.png)
+
+**🧰 Hardware Requirements**
+
+- ESP32 Dev Board
+
+- IR LED (transmitter)
+
+- Photodiode (receiver)
+
+- LM393 comparator (single module or chip)
+
+- BC547 (receiver amplifier transistor)
+
+- BC548 / 2N2222 (IR LED driver transistor)
+
+**Resistors:**
+
+- 56k–100k (photodiode → BC547 base)
+
+- 10k (BC547 collector pull-up)
+
+- 22k + 10k (LM393 threshold divider)
+
+- 4.7k (LM393 output pull-up)
+
+- 100 Ω (IR LED current limit)
+
+- Optional: 3D printed optical probe housing
